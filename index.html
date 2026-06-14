@@ -3,30 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
 
     <script>
-
 function calculate() {
-
     let prices = [15,20,25,30,25,10,35,20];
     let gross = 0;
 
     for(let i=1;i<=8;i++){
-
         let qty = Number(document.getElementById("q"+i).value) || 0;
-
         let amount = qty * prices[i-1];
-
         document.getElementById("a"+i).value = amount;
-
         gross += amount;
     }
 
     let discount = Number(document.getElementById("discount").value) || 0;
-
     let discountValue = gross * discount / 100;
-
     let net = gross - discountValue;
 
     document.getElementById("gross").innerHTML = gross;
@@ -35,15 +28,11 @@ function calculate() {
 }
 
 function clearData(){
-
     location.reload();
 }
-
     </script>
 
     <style>
-
-
 body{
     font-family: Arial, sans-serif;
     background:#f4f4f4;
@@ -52,6 +41,7 @@ body{
 
 .container{
     width:100%;
+    max-width:1200px;
     margin:auto;
     background:rgb(0, 0, 0);
     padding:20px;
@@ -82,15 +72,7 @@ button{
     margin:10px;
     font-size:16px;
 }
-
     </style>
-</head>
-<body>
-    <!DOCTYPE html>
-<html>
-<head>
-    <title>Hotel Bill Calculator</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
 
@@ -184,9 +166,5 @@ button{
     <button onclick="clearData()">Clear</button>
 </div>
 
-<script src="script.js"></script>
-
-</body>
-</html>
 </body>
 </html>
