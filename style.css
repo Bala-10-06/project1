@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 15px 0 10px 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* TABLE STYLES */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #2d2d2d;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tr:hover {
+    background-color: #2d2d2d;
+}
+
+/* INPUT STYLES */
+input {
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 100px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 100px;
+}
+
+input#discount {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin: 10px auto;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* BUTTON STYLES */
+.button-group {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* DESKTOP VIEW (1024px and up) */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin: 25px 0;
+    }
+
+    table {
+        font-size: 15px;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    input {
+        max-width: 120px;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}
+
+/* TABLET VIEW (768px to 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    input {
+        max-width: 90px;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 6px;
+    }
+}
+
+/* MOBILE VIEW - LANDSCAPE (480px to 767px) */
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    h3 {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    label {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    table {
+        font-size: 12px;
+        min-width: 500px;
+    }
+
+    th, td {
+        padding: 8px 5px;
+    }
+
+    input {
+        max-width: 80px;
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    input#discount {
+        max-width: 120px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 13px;
+        margin: 5px 3px;
+    }
+
+    .table-wrapper {
+        margin: 15px 0;
+    }
+}
+
+/* MOBILE VIEW - PORTRAIT (320px to 479px) */
+@media screen and (max-width: 479px) {
+    .container {
+        padding: 12px;
+        border-radius: 6px;
+        margin: 5px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin: 12px 0;
+        word-wrap: break-word;
+    }
+
+    h3 {
+        font-size: 13px;
+        margin: 8px 0 5px 0;
+    }
+
+    label {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 3px;
+    }
+
+    table {
+        font-size: 11px;
+        min-width: 400px;
+    }
+
+    th {
+        padding: 6px 3px;
+        font-size: 11px;
+    }
+
+    td {
+        padding: 6px 3px;
+        font-size: 11px;
+    }
+
+    input {
+        max-width: 70px;
+        padding: 6px;
+        font-size: 11px;
+        width: 100%;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+        max-width: 65px;
+    }
+
+    input#discount {
+        max-width: 100px;
+        margin: 8px auto;
+    }
+
+    button {
+        padding: 9px 14px;
+        font-size: 12px;
+        margin: 4px 2px;
+        width: calc(100% - 4px);
+        min-height: 44px;
+    }
+
+    .table-wrapper {
+        margin: 12px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* EXTRA SMALL DEVICES (320px and below) */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 12px;
+        margin: 6px 0 3px 0;
+    }
+
+    label {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    table {
+        font-size: 10px;
+        min-width: 350px;
+    }
+
+    th, td {
+        padding: 4px 2px;
+    }
+
+    input {
+        max-width: 60px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 11px;
+        margin: 3px 1px;
+    }
+}
