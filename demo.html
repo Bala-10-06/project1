@@ -1,0 +1,197 @@
+ 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+function calculate() {
+
+    let prices = [15,20,25,30,25,10,35,20];
+    let gross = 0;
+
+    for(let i=1;i<=8;i++){
+
+        let qty = Number(document.getElementById("q"+i).value) || 0;
+
+        let amount = qty * prices[i-1];
+
+        document.getElementById("a"+i).value = amount;
+
+        gross += amount;
+    }
+
+    let discount = Number(document.getElementById("discount").value) || 0;
+
+    let discountValue = gross * discount / 100;
+
+    let net = gross - discountValue;
+
+    document.getElementById("gross").innerHTML = gross;
+    document.getElementById("discountValue").innerHTML = discountValue;
+    document.getElementById("net").innerHTML = net;
+}
+
+function clearData(){
+
+    location.reload();
+}
+
+    </script>
+
+    <style>
+
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+.container{
+    width:100%;
+    margin:auto;
+    background:rgb(0, 0, 0);
+    padding:20px;
+    border-radius:10px;
+    color:white;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table, th, td{
+    border:1px solid black;
+}
+
+th, td{
+    padding:10px;
+}
+
+input{
+    width:80px;
+    text-align:center;
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    font-size:16px;
+}
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Bill Calculator</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+<div class="container">
+    <h2>HOTEL BILL CALCULATOR</h2>
+
+    <table>
+        <tr>
+            <td>S.No</td>
+            <td>Items</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Amount</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Chapathi</td>
+            <td><input type="number" id="q1"></td>
+            <td>15</td>
+            <td><input type="text" id="a1" readonly></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Dosai</td>
+            <td><input type="number" id="q2"></td>
+            <td>20</td>
+            <td><input type="text" id="a2" readonly></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Poori</td>
+            <td><input type="number" id="q3"></td>
+            <td>25</td>
+            <td><input type="text" id="a3" readonly></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Pongal</td>
+            <td><input type="number" id="q4"></td>
+            <td>30</td>
+            <td><input type="text" id="a4" readonly></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Idiyappam</td>
+            <td><input type="number" id="q5"></td>
+            <td>25</td>
+            <td><input type="text" id="a5" readonly></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Idly</td>
+            <td><input type="number" id="q6"></td>
+            <td>10</td>
+            <td><input type="text" id="a6" readonly></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Oothappam</td>
+            <td><input type="number" id="q7"></td>
+            <td>35</td>
+            <td><input type="text" id="a7" readonly></td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Omlet</td>
+            <td><input type="number" id="q8"></td>
+            <td>20</td>
+            <td><input type="text" id="a8" readonly></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <label>Discount % :</label>
+    <input type="number" id="discount">
+
+    <h3>Gross Value : <span id="gross">0</span></h3>
+    <h3>Discount Value : <span id="discountValue">0</span></h3>
+    <h3>Net Value : <span id="net">0</span></h3>
+
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="clearData()">Clear</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>
